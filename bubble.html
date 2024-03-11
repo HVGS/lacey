@@ -1,12 +1,100 @@
+
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Lacey - Bubble Bg</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>CodePen - Pixi Scrolling Bubbles</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-a7751fce9f8bdda3329296b44cd901f541bfaa7c5417190fba49dc1cf6fd799f.css" />
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+
+
+  <title>CodePen - Pixi Scrolling Bubbles</title>
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning span { font-family: initial; }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
+  </style>
 </head>
+
+<body class="">
+  <div id="result-iframe-wrap" role="main">
+    <iframe
+      id="result"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  
+
+    <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+
+    <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+    <link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+    <link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot; color=&quot;#111&quot; />
+
+
+
+  
+    <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;></script>
+
+
+  <title>Lacey - Bubble BG</title>
+
+    <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/Harry-McNamara/pen/eYoZdxd&quot;>
+  
+  <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&quot;>
+
+  
+  
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&amp;display=swap');
 
 canvas {
   position: fixed;
@@ -46,7 +134,7 @@ canvas {
 
 h1 {
   margin: 0;
-  font-family: "Cherry Bomb One", sans-serif;
+  font-family: &quot;Cherry Bomb One&quot;, sans-serif;
   font-size: 10vw;
   color: var(--color-heading);
   text-shadow:     0 1px 0 var(--color-heading-shadow),
@@ -67,7 +155,7 @@ h1 {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
   color: var(--color-text);
 }
 
@@ -83,25 +171,33 @@ button:hover, button:focus-visible {
   background: var(--color-button-active);
 }
 </style>
-<body>
-<!-- partial:index.partial.html -->
-<div class="intro">
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate=&quot;no&quot;>
+  <div class=&quot;intro&quot;>
   <h1>Lacey</h1>
   <p></p>
 </div>
 
 <!-- spacing to allow scroll -->
-<div tyle="height:500vw;"></div>
+<div tyle=&quot;height:500vw;&quot;></div>
+  
+      <script id=&quot;rendered-js&quot; type=&quot;module&quot;>
+import * as PIXI from &quot;https://cdn.skypack.dev/pixi.js@7.2.1&quot;;
 
-  <script>
-import * as PIXI from "https://cdn.skypack.dev/pixi.js@7.2.1";
-
-let THEME = "dark";
-let MOTION_PREF = "allow";
+let THEME = &quot;dark&quot;;
+let MOTION_PREF = &quot;allow&quot;;
 
 const PARTICLE_COUNT = 40;
-const DARK_COLORS = ["0x4361ee", "0x3a0ca3", "0x7209b7", "0xf72585"];
-const LIGHT_COLORS = ["0xbde0fe", "0xa2d2ff", "0xffafcc", "0xffc8dd"];
+const DARK_COLORS = [&quot;0x4361ee&quot;, &quot;0x3a0ca3&quot;, &quot;0x7209b7&quot;, &quot;0xf72585&quot;];
+const LIGHT_COLORS = [&quot;0xbde0fe&quot;, &quot;0xa2d2ff&quot;, &quot;0xffafcc&quot;, &quot;0xffc8dd&quot;];
 
 // from: https://www.joshwcomeau.com/snippets/javascript/debounce/
 const debounce = (callback, wait) => {
@@ -129,7 +225,7 @@ class Particle {
     this.sprite.speed = speed;
     this.bounds = bounds;
     this.interactive = true;
-    this.sprite.eventMode = "static";
+    this.sprite.eventMode = &quot;static&quot;;
     this.sprite.inertia = 0;
     this.scrollDelta = 0;
   }
@@ -176,18 +272,18 @@ export default class Bubbles {
 
   // these would be tied to getters for REAL system preferences, not the fake demo ones
   get isLightTheme() {
-    return THEME === "light";
+    return THEME === &quot;light&quot;;
   }
 
   get motionPref() {
-    return MOTION_PREF === "allow";
+    return MOTION_PREF === &quot;allow&quot;;
   }
 
   setVars() {
     this.particles = [];
     this.particleTotal = PARTICLE_COUNT;
     this.count = 0;
-    this.background = this.isLightTheme ? "cyan" : "indigo";
+    this.background = this.isLightTheme ? &quot;cyan&quot; : &quot;indigo&quot;;
     this.scrollY;
     this.ticking = false;
   }
@@ -198,7 +294,7 @@ export default class Bubbles {
       resizeTo: window
     });
     document.body.appendChild(this.pixi.view);
-    this.pixi.stage.eventMode = "dynamic";
+    this.pixi.stage.eventMode = &quot;dynamic&quot;;
     this.pixi.stage.hitArea = this.pixi.screen;
 
     this.container = new PIXI.Container();
@@ -217,10 +313,10 @@ export default class Bubbles {
   }
 
   bindEvents() {
-    window.addEventListener("themeSwitch", this.handleSwitch);
-    window.addEventListener("motionSwitch", this.handleMotion);
-    window.addEventListener("scroll", this.handleScroll);
-    this.pixi.renderer.on("resize", this.handleResize);
+    window.addEventListener(&quot;themeSwitch&quot;, this.handleSwitch);
+    window.addEventListener(&quot;motionSwitch&quot;, this.handleMotion);
+    window.addEventListener(&quot;scroll&quot;, this.handleScroll);
+    this.pixi.renderer.on(&quot;resize&quot;, this.handleResize);
   }
 
   tick(delta) {
@@ -288,8 +384,8 @@ export default class Bubbles {
 
   handleSwitch = () => {
     this.pixi.renderer.background.color = this.isLightTheme
-      ? "0x00FFFF"
-      : "0x4b0082";
+      ? &quot;0x00FFFF&quot;
+      : &quot;0x4b0082&quot;;
     this.particleContainer.destroy();
     this.particleContainer = null;
     this.createParticles();
@@ -323,9 +419,9 @@ export default class Bubbles {
 
   // Remove listeners, stop audio, and halt progress tracking
   cleanUp() {
-    window.addEventListener("themeSwitch", this.handleSwitch);
-    window.addEventListener("motionSwitch", this.handleMotion);
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener(&quot;themeSwitch&quot;, this.handleSwitch);
+    window.addEventListener(&quot;motionSwitch&quot;, this.handleMotion);
+    window.addEventListener(&quot;scroll&quot;, this.handleScroll);
     document.body.removeChild(this.pixi.view);
   }
 }
@@ -336,39 +432,52 @@ const app = new Bubbles();
 // for toggling theme and motion for demo purposes
 // this does not account for system preferences
 
-const toggleTheme = document.getElementById("toggle-theme");
-const toggleMotion = document.getElementById("toggle-motion");
+const toggleTheme = document.getElementById(&quot;toggle-theme&quot;);
+const toggleMotion = document.getElementById(&quot;toggle-motion&quot;);
 
-toggleTheme.addEventListener("click", () => {
+toggleTheme.addEventListener(&quot;click&quot;, () => {
   let newTheme;
   const root = document.documentElement;
 
-  if (THEME === "light") {
-    newTheme = "dark";
+  if (THEME === &quot;light&quot;) {
+    newTheme = &quot;dark&quot;;
   } else {
-    newTheme = "light";
+    newTheme = &quot;light&quot;;
   }
 
   THEME = newTheme;
-  const event = new CustomEvent("themeSwitch", { detail: newTheme });
+  const event = new CustomEvent(&quot;themeSwitch&quot;, { detail: newTheme });
   window.dispatchEvent(event);
 
-  root.classList.remove("light", "dark");
+  root.classList.remove(&quot;light&quot;, &quot;dark&quot;);
   root.classList.add(newTheme);
 });
 
-toggleMotion.addEventListener("click", () => {
+toggleMotion.addEventListener(&quot;click&quot;, () => {
   let newPref;
-  if (MOTION_PREF === "allow") {
-    newPref = "reduced";
+  if (MOTION_PREF === &quot;allow&quot;) {
+    newPref = &quot;reduced&quot;;
   } else {
-    newPref = "allow";
+    newPref = &quot;allow&quot;;
   }
 
   MOTION_PREF = newPref;
-  const event = new CustomEvent("motionSwitch", { detail: newPref });
+  const event = new CustomEvent(&quot;motionSwitch&quot;, { detail: newPref });
   window.dispatchEvent(event);
 });
-  </script>
+//# sourceURL=pen.js
+    </script>
+
+  
 </body>
+
+</html>
+"
+      sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer *; ambient-light-sensor *; camera *; display-capture *; encrypted-media *; geolocation *; gyroscope *; microphone *; midi *; payment *; vr *; web-share *; serial *; xr-spatial-tracking *" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+  </div>
+
+</body>
+
 </html>
